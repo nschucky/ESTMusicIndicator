@@ -34,7 +34,7 @@ class MusicListViewController: UITableViewController, UIGestureRecognizerDelegat
         indicatorView.tintColor = UIColor.redColor()
         navigationController?.navigationBar.addSubview(indicatorView)
         
-        let tap = UITapGestureRecognizer(target: self, action: Selector("didTapIndicator:"))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(MusicListViewController.didTapIndicator(_:)))
         tap.delegate = self
         indicatorView.addGestureRecognizer(tap)
     }
